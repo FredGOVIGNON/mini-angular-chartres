@@ -1,0 +1,35 @@
+<table class='table table-bordered'>
+    <tr>
+        <th>
+            Nom
+        </th>
+        <th>
+            Numéro
+        </th>
+        <th>
+            Supprimer
+        </th>
+    </tr>
+    <tr ng-repeat='contact in contacts'>
+        <td>
+            {{contact.nom}}
+        </td>
+        <td>
+            {{contact.numero}}
+        </td>
+        <td>
+            <button class='btn btn-danger' ng-click='delete($index)'>Supprimer</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input ng-model='new.nom' placeholder="Nom...">
+        </td>
+        <td>
+            <input ng-model='new.numero' placeholder="Numéro...">
+        </td>
+        <td>
+            <button ng-click='add()' class='btn btn-default'>Ajouter</button>
+        </td>
+    </tr>
+</table>
